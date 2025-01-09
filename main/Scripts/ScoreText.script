@@ -1,0 +1,38 @@
+function init(self)
+	UpdateText(self, 0)
+end
+
+function UpdateText(self, score)
+	label.set_text("#scoreText", score)
+end
+
+function final(self)
+	-- Add finalization code here
+	
+end
+
+function update(self, dt)
+	-- Add update code here
+	
+end
+
+function fixed_update(self, dt)
+	-- This function is called if 'Fixed Update Frequency' is enabled in the Engine section of game.project
+	-- Can be coupled with fixed updates of the physics simulation if 'Use Fixed Timestep' is enabled in
+	-- Physics section of game.project
+	-- Add update code here
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("mouseClicked") then
+		UpdateText(self, message.score)
+	end
+end
+
+function on_input(self, action_id, action)
+	
+end
+
+function on_reload(self)
+	
+end

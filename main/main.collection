@@ -1,2 +1,23 @@
 name: "main"
+instances {
+  id: "Egg"
+  prototype: "/main/GameObjects/Egg.go"
+  position {
+    x: 162.0
+    y: 301.0
+  }
+  scale3 {
+    x: 0.776
+    y: 0.776
+    z: 0.776
+  }
+}
+instances {
+  id: "ScoreText"
+  prototype: "/main/GameObjects/ScoreText.go"
+  position {
+    x: 164.0
+    y: 506.0
+  }
+}
 scale_along_z: 0
