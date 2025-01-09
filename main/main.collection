@@ -1,2 +1,39 @@
 name: "main"
+instances {
+  id: "Husk"
+  prototype: "/main/Husk.go"
+  position {
+    x: 635.0
+    y: 585.0
+  }
+}
 scale_along_z: 0
+embedded_instances {
+  id: "score"
+  data: "components {\n"
+  "  id: \"text\"\n"
+  "  component: \"/scripts/text.script\"\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"label\"\n"
+  "  type: \"label\"\n"
+  "  data: \"size {\\n"
+  "  x: 128.0\\n"
+  "  y: 32.0\\n"
+  "}\\n"
+  "text: \\\"Score\\\"\\n"
+  "font: \\\"/builtins/fonts/default.font\\\"\\n"
+  "material: \\\"/builtins/fonts/label-df.material\\\"\\n"
+  "\"\n"
+  "  scale {\n"
+  "    x: 4.0\n"
+  "    y: 4.0\n"
+  "    z: 4.0\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: 627.0
+    y: 105.0
+  }
+}
