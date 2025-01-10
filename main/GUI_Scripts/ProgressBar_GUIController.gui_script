@@ -1,6 +1,7 @@
 function init(self)
-	local clickText = gui.get_node("clicksText")
-	gui.set_text(clickText, "(Not Working) 0 / 10")
+	updateClicksText(self, 0)
+
+	updateProgressBarSize(self, 0)
 end
 
 function final(self)
@@ -12,6 +13,18 @@ function update(self, dt)
 end
 
 function on_message(self, message_id, message, sender)
-	
+	if message_id == hash("EggClicked") then
+		updateClicksText(self, message.currentClicks)
+		updateProgressBarSize(self, message.currentClicks)
+	end
 end
 
+function updateClicksText(self, value)
+	local clickText = gui.get_node("clicksText")
+	gui.set_text(clickText, value.." / 10")
+end
+
+function updateProgressBarSize(self, value)
+	local progressBar = gui.get_node("actualProgress")
+	gui.set_size(progressBar, vmath.vector3(value * 10, 100, 0))
+end

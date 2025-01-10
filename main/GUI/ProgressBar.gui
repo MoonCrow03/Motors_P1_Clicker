@@ -68,7 +68,6 @@ nodes {
   layer: "Front"
   inherit_alpha: true
   outerBounds: PIEBOUNDS_RECTANGLE
-  size_mode: SIZE_MODE_AUTO
 }
 nodes {
   position {
