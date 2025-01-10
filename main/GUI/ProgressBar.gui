@@ -1,0 +1,100 @@
+script: "/main/Scripts/ProgressBar_GUIController.gui_script"
+fonts {
+  name: "default"
+  font: "/builtins/fonts/default.font"
+}
+nodes {
+  position {
+    x: 480.0
+    y: 609.0
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  type: TYPE_TEXT
+  text: "Eggs needed for the next Duck!\n"
+  ""
+  font: "default"
+  id: "ProgressText"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 488.0
+    y: 582.0
+  }
+  scale {
+    x: 3.91111
+    y: 0.216459
+  }
+  size {
+    x: 100.0
+    y: 100.0
+  }
+  color {
+    x: 0.4
+    y: 0.4
+    z: 0.4
+  }
+  type: TYPE_BOX
+  id: "ProgressBar"
+  layer: "Background"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -49.260517
+  }
+  scale {
+    x: 0.984418
+    y: 0.673412
+  }
+  size {
+    x: 100.0
+    y: 100.0
+  }
+  color {
+    x: 0.8
+    y: 0.2
+    z: 0.2
+  }
+  type: TYPE_PIE
+  id: "actualProgress"
+  xanchor: XANCHOR_LEFT
+  pivot: PIVOT_W
+  parent: "ProgressBar"
+  layer: "Front"
+  inherit_alpha: true
+  outerBounds: PIEBOUNDS_RECTANGLE
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 480.0
+    y: 582.0
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  type: TYPE_TEXT
+  text: "0 / 10\n"
+  ""
+  font: "default"
+  id: "clicksText"
+  layer: "TextLayer"
+  inherit_alpha: true
+}
+layers {
+  name: "Background"
+}
+layers {
+  name: "Front"
+}
+layers {
+  name: "TextLayer"
+}
+material: "/builtins/materials/gui.material"
+adjust_reference: ADJUST_REFERENCE_PARENT

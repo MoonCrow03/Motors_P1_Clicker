@@ -2,6 +2,10 @@ components {
   id: "Click_Controller"
   component: "/main/Scripts/Click_Controller.script"
 }
+components {
+  id: "ProgressBar"
+  component: "/main/GUI/ProgressBar.gui"
+}
 embedded_components {
   id: "sprite"
   type: "sprite"
