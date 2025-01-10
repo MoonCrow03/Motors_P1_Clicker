@@ -1,6 +1,6 @@
 function init(self)
 	local clickText = gui.get_node("clicksText")
-	gui.set_text(clickText, "0 / 10")
+	gui.set_text(clickText, "(Not Working) 0 / 10")
 end
 
 function final(self)
