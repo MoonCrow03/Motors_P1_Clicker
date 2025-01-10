@@ -29,4 +29,12 @@ instances {
     z: 2.28
   }
 }
+instances {
+  id: "MousePosition"
+  prototype: "/main/GameObjects/MousePosition.go"
+  position {
+    x: 474.0
+    y: 131.0
+  }
+}
 scale_along_z: 0
