@@ -9,10 +9,6 @@ embedded_components {
   "font: \"/builtins/fonts/default.font\"\n"
   "material: \"/builtins/fonts/label-df.material\"\n"
   ""
-  position {
-    x: 226.3158
-    y: 71.929825
-  }
   scale {
     x: 1.864
     y: 1.864

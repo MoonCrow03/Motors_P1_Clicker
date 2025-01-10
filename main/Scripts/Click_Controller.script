@@ -21,7 +21,7 @@ function on_input(self, action_id, action)
 			msg.post("ScoreText#ScoreText", "mouseClicked", {score = self.score})
 
 			
-			GeneratePlusOneText(action.x, action.y)
+			GeneratePlusOneText(self, action.x, action.y)
 
 			
 			StartClickAnimation(self)
@@ -31,7 +31,7 @@ end
 
 function StartClickAnimation(self)
 	
-	go.set(".", "scale.y", 1)
+	go.set(".", "scale.y", self.initialScale + 0.224)
 	go.animate(".", "scale.y", go.PLAYBACK_LOOP_PINGPONG, 0.5, go.EASING_OUTSINE, 1)
 
 	timer.delay(0.1, false, function()
@@ -40,10 +40,17 @@ function StartClickAnimation(self)
 	end)
 end
 
-function GeneratePlusOneText(x, y)
-	local pos = vmath.vector3(x, y, 0) 
+function GeneratePlusOneText(self, x, y)
+
+	--local eggPos = go.get("Egg", "position")
+	local pos = vmath.vector3(x, y, 0)
 	local text_id = factory.create("#textFactory", pos) 
-	local final_pos = pos + vmath.vector3(0, 50, 0) 
+
+	local randomX = math.random(-25, 26)
+	local randomY = math.random(50, 61)
+	
+	local final_pos = pos + vmath.vector3(randomX, randomY, 0) 
+	
 	go.animate(text_id, "position", go.PLAYBACK_ONCE_FORWARD, final_pos, go.EASING_LINEAR, 1, 0, function()
 		go.delete(text_id) 
 	end)
