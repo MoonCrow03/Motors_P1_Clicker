@@ -20,4 +20,17 @@ instances {
     y: 506.0
   }
 }
+instances {
+  id: "PlusOne"
+  prototype: "/main/GameObjects/PlusOne.go"
+  position {
+    x: 316.0
+    y: 307.0
+  }
+  scale3 {
+    x: 2.28
+    y: 2.28
+    z: 2.28
+  }
+}
 scale_along_z: 0

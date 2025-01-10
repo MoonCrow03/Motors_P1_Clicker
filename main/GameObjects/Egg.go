@@ -13,3 +13,9 @@ embedded_components {
   "}\n"
   ""
 }
+embedded_components {
+  id: "textFactory"
+  type: "factory"
+  data: "prototype: \"/main/GameObjects/PlusOne.go\"\n"
+  ""
+}
