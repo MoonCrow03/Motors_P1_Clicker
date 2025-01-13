@@ -14,10 +14,12 @@ end
 
 function on_message(self, message_id, message, sender)
 	
-	if message_id == hash("EggClicked") then
+	if message_id == hash("EggClicked") or message_id == hash("add_click") then
 		UpdateClicksText(self, message.currentClicks)
 		self.barObjectiveValue = message.currentClicks
+
 	end
+	
 end 
 
 function UpdateClicksText(self, value)

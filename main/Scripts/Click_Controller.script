@@ -21,7 +21,15 @@ function on_message(self, message_id, message, sender)
 	
 	if message_id == hash("trigger_response") then
 		canClick(self, message)
+
+
+	elseif message_id == hash("add_click") then
+		self.score = self.score + 1
+		msg.post("ScoreText#ScoreText", "mouseClicked", { score = self.score })
+		CheckDuckToSpawn(self)
 	end
+
+	
 end
 
 function canClick(self, message)
@@ -54,8 +62,8 @@ function CheckDuckToSpawn(self)
 	self.currentClicksToSpawnDuck = self.currentClicksToSpawnDuck + 1
 	
 	if self.currentClicksToSpawnDuck >= self.maxClicksToSpawnDuck then
-		--SPAWN DUCK
 		self.currentClicksToSpawnDuck = 0
+		SpawnDuck(self)
 	end
 	
 	msg.post("Egg#ProgressBar", "EggClicked", {currentClicks = self.currentClicksToSpawnDuck})
@@ -86,3 +94,21 @@ function GeneratePlusOneText(self, x, y)
 		go.delete(text_id) 
 	end)
 end
+
+function SpawnDuck(self) 
+	local screen_width = tonumber(sys.get_config("display.width"))
+	local screen_height = tonumber(sys.get_config("display.height"))
+
+	local random_x = math.random(350, screen_width -100)
+	local random_y = math.random(100, screen_height-200)
+
+	local spawn_position = vmath.vector3(random_x, random_y, 0)
+
+
+
+	factory.create("#duckFactory", spawn_position)
+
+
+
+	
+end 

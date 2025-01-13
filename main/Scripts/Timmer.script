@@ -1,0 +1,14 @@
+function init(self)
+
+	local target_url = "main:/Egg#Click_Controller"
+	
+	self.timer_id = timer.delay(3, true, function()
+		msg.post(target_url, "add_click")
+	end)
+end
+
+function final(self)
+	if self.timer_id then
+		timer.cancel(self.timer_id)
+	end
+end

@@ -47,3 +47,9 @@ embedded_components {
   "}\n"
   ""
 }
+embedded_components {
+  id: "duckFactory"
+  type: "factory"
+  data: "prototype: \"/main/GameObjects/Duck.go\"\n"
+  ""
+}
