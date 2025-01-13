@@ -31,6 +31,7 @@ function on_message(self, message_id, message, sender)
 		self.score = self.score + 1
 		sound.play("#addclick")
 		msg.post("ScoreText#ScoreText", "mouseClicked", { score = self.score })
+		GeneratePlusOneText(self, message.position.x, message.position.y)
 		CheckDuckToSpawn(self)
 	end
 

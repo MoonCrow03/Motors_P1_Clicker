@@ -6,7 +6,7 @@ function init(self)
 	local target_url = "main:/Egg#Click_Controller"
 	
 	self.timer_id = timer.delay(3, true, function()
-		msg.post(target_url, "add_click")
+		msg.post(target_url, "add_click", {position = go.get_position(".")})
 	end)
 end
 
