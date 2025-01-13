@@ -37,4 +37,8 @@ instances {
     y: 131.0
   }
 }
+instances {
+  id: "BackgroundMusic"
+  prototype: "/main/GameObjects/BackgroundMusic.go"
+}
 scale_along_z: 0

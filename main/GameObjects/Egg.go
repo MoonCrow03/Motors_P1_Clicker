@@ -53,3 +53,21 @@ embedded_components {
   data: "prototype: \"/main/GameObjects/Duck.go\"\n"
   ""
 }
+embedded_components {
+  id: "click"
+  type: "sound"
+  data: "sound: \"/main/Assets/SoundEffects/click.wav\"\n"
+  ""
+}
+embedded_components {
+  id: "duck"
+  type: "sound"
+  data: "sound: \"/main/Assets/SoundEffects/quack.wav\"\n"
+  ""
+}
+embedded_components {
+  id: "addclick"
+  type: "sound"
+  data: "sound: \"/main/Assets/SoundEffects/ui.wav\"\n"
+  ""
+}
