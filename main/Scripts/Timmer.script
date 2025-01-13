@@ -1,3 +1,6 @@
+
+go.property("interval", 3)
+
 function init(self)
 
 	local target_url = "main:/Egg#Click_Controller"

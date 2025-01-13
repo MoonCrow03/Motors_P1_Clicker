@@ -1,0 +1,22 @@
+animations {
+  id: "Pato_01"
+  images {
+    image: "/main/Assets/Pato_01.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+}
+animations {
+  id: "Pato_02"
+  images {
+    image: "/main/Assets/Pato_02.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+}
+animations {
+  id: "Pato_03"
+  images {
+    image: "/main/Assets/Pato_03.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+}
+extrude_borders: 2

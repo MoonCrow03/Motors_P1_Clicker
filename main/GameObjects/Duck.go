@@ -9,7 +9,7 @@ embedded_components {
   "material: \"/builtins/materials/sprite.material\"\n"
   "textures {\n"
   "  sampler: \"texture_sampler\"\n"
-  "  texture: \"/main/Components/duck_Atlas.atlas\"\n"
+  "  texture: \"/main/Components/duck_01.atlas\"\n"
   "}\n"
   ""
 }
